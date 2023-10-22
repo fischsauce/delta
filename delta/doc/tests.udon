@@ -1,0 +1,21 @@
+;>
+- Developer: ~ramteb-tinmut
+- License: GNU GPL v3
+- Source repo: [https://github.com/fischsauce/delta](https://github.com/fischsauce/delta)
+
+## Prep
+
+Create a fake ship and new desk:
+`urbit -F zod `
+`./zod/.run`
+`> |new-desk %delta`
+
+Copy the contents of delta & install:
+`cp -r delta/* zod/delta`
+`~zod:dojo>  |commit %delta`
+`~zod:dojo>  |install our %delta`
+
+* Ensure your kelvin version matches ./delta/sys.kelvin
+
+## Run tests:
+`~zod:dojo>  -test /=delta=/tests/delta-unit`
